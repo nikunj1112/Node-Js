@@ -38,6 +38,7 @@ server.get("/todo", (req, res) => {
         todos = todos.filter((todo) => todo.status === status);
     }
 
+    
     // Search by title (case-insensitive)
     if (title) {
         const q = title.toLowerCase();
