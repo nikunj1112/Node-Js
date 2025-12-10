@@ -28,6 +28,16 @@ This project is a simple **Node.js HTTP server** that handles multiple routes an
 
 ---
 
+## 📸 Demo/preview
+
+
+<img width="600" height="400" alt="Screenshot 2025-12-10 at 3 06 54 PM" src="https://github.com/user-attachments/assets/545920da-5303-4a72-9f15-54d4c1bb3004" />
+<img width="<img width="600" height="400" alt="Screenshot 2025-12-10 at 3 06 16 PM" src="https://github.com/user-attachments/assets/2af11673-bb09-49ac-b242-5ea94ea75369" /><img width="600" height="400" alt="Screenshot 2025-12-10 at 3 06 04 PM" src="https://github.com/user-attachments/assets/cc8b2342-72b0-49c5-9c89-d9925133e191" />
+" height="400" alt="Screenshot 2025-12-10 at 3 07 14 PM" src="https://github.com/user-attachments/assets/749b3c7f-4c9c-4a9f-bf4a-78889785eb4e" />
+
+
+---
+
 ## 📂 Project Structure
 
 ```
