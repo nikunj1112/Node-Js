@@ -1,2 +1,6 @@
 client request on http://localhost:1011/ by GET at 10/11/2025| 14:54:4 from this IP: ::1
 client request on http://localhost:1011/about by GET at 10/11/2025| 14:54:15 from this IP: ::1
+client request on http://localhost:1011/ by GET at 10/11/2025| 15:5:53 from this IP: ::1
+client request on http://localhost:1011/about by PUT at 10/11/2025| 15:6:11 from this IP: ::1
+client request on http://localhost:1011/service by PUT at 10/11/2025| 15:6:45 from this IP: ::1
+client request on http://localhost:1011/portfolio by PUT at 10/11/2025| 15:7:8 from this IP: ::1

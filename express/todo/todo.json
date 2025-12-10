@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Milk, bread, eggs",
+    "status": "pending",
+    "dueDate": "2025-01-10",
+    "createdAt": "2025-01-05"
+  },
+  {
+    "id": 2,
+    "title": "Pay electricity bill",
+    "description": "Online payment before due date",
+    "status": "done",
+    "dueDate": "2025-01-12",
+    "createdAt": "2025-01-03"
+  },
+  {
+    "id": 3,
+    "title": "Finish assignment",
+    "description": "Complete Todos API project",
+    "status": "in-progress",
+    "dueDate": "2025-01-15",
+    "createdAt": "2025-01-08"
+  },
+  {
+    "id": 4,
+    "title": "Go for a walk",
+    "description": "Evening walk for 30 minutes",
+    "status": "pending",
+    "dueDate": "2025-01-06",
+    "createdAt": "2025-01-01"
+  },
+  {
+    "id": 5,
+    "title": "Learn React",
+    "description": "Practice component lifecycle and hooks",
+    "status": "pending",
+    "dueDate": "2025-01-20",
+    "createdAt": "2025-01-10"
+  },
+  {
+    "id": 6,
+    "title": "Water the plants",
+    "description": "Daily morning watering schedule",
+    "status": "pending",
+    "dueDate": "2025-01-18",
+    "createdAt": "2025-01-12"
+  }
+]
