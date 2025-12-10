@@ -1,0 +1,2 @@
+client request on http://localhost:1011/ by GET at 10/11/2025| 14:54:4 from this IP: ::1
+client request on http://localhost:1011/about by GET at 10/11/2025| 14:54:15 from this IP: ::1
