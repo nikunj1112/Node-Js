@@ -1,17 +1,34 @@
 [
   {
-    "id": 1766592638676,
-    "title": "Success",
-    "twitts": "“Success doesn’t come from what you do occasionally, it comes from what you do consistently.”\\\\n\\\\n“Dreams work only when you do.\""
+    "id": 1766843374704,
+    "username": "code.harsh__01",
+    "tweet": "Learning to code is not about memorizing syntax.\nIt’s about learning how to think, break problems, fail fast, and try again.\nThe bugs you struggle with today are training your brain for tomorrow’s challenges.\nIf you feel stuck, that means you’re actually learning.\nKeep going — every great developer once felt exactly like this.",
+    "createdAt": 1766843374704,
+    "likes": 3,
+    "retweets": 1
   },
   {
-    "id": 4,
-    "title": "Motivational",
-    "twitts": "“No matter how slow the progress feels, moving forward is still winning.”\n\n“Small habits done daily create results that motivation alone never can.”\n\n“I remind myself why I started whenever quitting feels easier.”\n\n“Consistency today builds confidence tomorrow.”"
+    "id": 1766843501321,
+    "username": "Indian_Youth",
+    "tweet": "Today in India, technology is no longer a luxury — it’s a necessity.\nFrom education to business, from government services to daily life,\ndigital skills decide speed, access, and growth.\nLearning technology today is not about jobs only,\nit’s about staying relevant in a fast-moving world.",
+    "createdAt": 1766843501321,
+    "likes": 3,
+    "retweets": 1
   },
   {
-    "id": 5678,
-    "title": "Motivational",
-    "twitts": "“No matter how slow the progress feels, moving forward is still winning.”\n\n“Small habits done daily create results that motivation alone never can.”"
+    "id": 1766843880419,
+    "username": "DigitalBharatX",
+    "tweet": "Some news discussions revolve around broader issues like platform governance and free speech debates online, which are also trending in tweets today across different accounts.",
+    "createdAt": 1766843880419,
+    "likes": 5,
+    "retweets": 1
+  },
+  {
+    "id": 1766844572283,
+    "username": "Nikunj.web",
+    "tweet": "building projects > watching tutorials 🔥",
+    "createdAt": 1766844572283,
+    "likes": 3,
+    "retweets": 3
   }
 ]

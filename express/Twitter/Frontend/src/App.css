@@ -1,42 +1,378 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ---------- Global ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: #efece3;
+  color: #000000;
+  overflow: hidden; /* ❌ full page scroll band */
+}
+
+/* ---------- Layout ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 320px;
+  height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ---------- Left Sidebar ---------- */
+.left {
+  padding: 20px;
+  border-right: 1px solid #d5d5d5;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #4a70a9;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.menu li {
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu li:hover,
+.menu .active {
+  background: #8fabd4;
+  color: #000;
+}
+
+.tweet-btn,
+.theme-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #4a70a9;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ---------- Center ---------- */
+.center {
+  border-right: 1px solid #d5d5d5;
+  height: 100vh;
+  display: flex;              /* 🔥 important */
+  flex-direction: column;     /* 🔥 */
+}
+
+/* ---------- Header ---------- */
+.header {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #d5d5d5;
+  background: #efece3;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;             /* 🔥 fixed */
+}
+
+/* ---------- Tweet Box ---------- */
+.tweet-box {
+  padding: 15px;
+  border-bottom: 1px solid #d5d5d5;
+  flex-shrink: 0;             /* 🔥 fixed */
+}
+
+.tweet-box input,
+.tweet-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.tweet-box textarea {
+  resize: none;
+  height: 80px;
+}
+
+.tweet-box button {
+  background: #4a70a9;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- ONLY THIS PART SCROLLS ---------- */
+.tweets-scroll {
+  flex: 1;                    /* remaining height */
+  overflow-y: auto;           /* ✅ only tweets scroll */
+}
+
+/* ---------- Tweet ---------- */
+.tweet {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.tweet:hover {
+  background: rgba(143, 171, 212, 0.15);
+}
+
+.tweet img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.tweet-body {
+  flex: 1;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.tweet-header span {
+  color: gray;
+}
+
+.tweet-body p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* ---------- Actions ---------- */
+.actions {
+  display: flex;
+  gap: 14px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ---------- Edit ---------- */
+.tweet-body textarea {
+  width: 80%;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 5px;
+  margin-top: 6px;
+}
+
+/* ---------- Right Sidebar ---------- */
+.right {
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.search {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  margin-bottom: 20px;
 }
 
 .card {
-  padding: 2em;
+  background: white;
+  padding: 15px;
+  border-radius: 16px;
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.card p {
+  padding: 6px 0;
+  color: #4a70a9;
+  cursor: pointer;
+}
+
+/* ================= DARK MODE ================= */
+.dark {
+  background: #000000;
+  color: #efece3;
+}
+
+.dark .left,
+.dark .center,
+.dark .right {
+  background: #000;
+}
+
+.dark .header {
+  background: #000;
+  border-color: #333;
+}
+
+.dark .tweet,
+.dark .tweet-box,
+.dark .card {
+  background: #111;
+  border-color: #333;
+}
+
+.dark input,
+.dark textarea {
+  background: #111;
+  color: #efece3;
+  border-color: #333;
+}
+
+.dark .menu li:hover,
+.dark .menu .active {
+  background: #4a70a9;
+  color: #fff;
+}
+
+/* ================= MOBILE NAV ================= */
+.mobile-nav {
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .right {
+    display: none;
+  }
+
+  .tweets-scroll {
+    padding-bottom: 80px; /* mobile nav space */
+  }
+
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #efece3;
+    border-top: 1px solid #ccc;
+    justify-content: space-around;
+    padding: 12px 0;
+    font-size: 22px;
+    z-index: 20;
+  }
+
+  .dark .mobile-nav {
+    background: #000;
+    border-color: #333;
+  }
+}
+
+
+
+
+/* ===== Edit Tweet Box ===== */
+.edit-textarea {
+  width: 50%;
+  min-height: 70px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #8fabd4;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  background: #ffffff;
+  transition: 0.25s;
+}
+
+.edit-textarea:focus {
+  border-color: #4a70a9;
+  box-shadow: 0 0 0 2px rgba(74, 112, 169, 0.25);
+}
+
+/* ===== Edit Buttons Wrapper (optional but recommended) ===== */
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* ===== Save Button ===== */
+.save-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #4a70a9;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.save-btn:hover {
+  background: #3c5f8e;
+  transform: translateY(-1px);
+}
+
+/* ===== Cancel / Exit Button ===== */
+.exit-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.exit-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Dark Mode Support ===== */
+.dark .edit-textarea {
+  background: #111;
+  color: #efece3;
+  border-color: #4a70a9;
+}
+
+.dark .exit-btn {
+  color: #ccc;
+}
+
+.dark .exit-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.name{
+  color: #4a70a9;
+  font-size: 20px;
+  
 }
