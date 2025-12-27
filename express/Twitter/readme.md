@@ -5,7 +5,7 @@ This project supports **CRUD operations**, **likes**, **retweets**, **edit tweet
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
  ### 🔹 Frontend (React)
 - 🏠 Twitter-style **3-column layout**
@@ -89,7 +89,7 @@ cd backend
 npm install
 node server.js
 
-# Server will run on:
+#### Server will run on:
 http://localhost:1515
 
 ## 2️⃣ Frontend Setup
