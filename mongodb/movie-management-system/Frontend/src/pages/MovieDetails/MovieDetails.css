@@ -1,0 +1,182 @@
+/* ===============================
+   FULL PAGE WRAPPER (CREAM BACKGROUND)
+=============================== */
+.movie-details {
+    min-height: 93vh;
+    width: 100%;
+    background: linear-gradient(
+      135deg,
+      #f6f5f0,
+      #e5e5cb
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 50px;
+  }
+  
+  /* ===============================
+     POSTER
+  =============================== */
+  .movie-poster {
+    width: 340px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .movie-poster:hover {
+    transform: scale(1.06);
+    box-shadow: 0 40px 85px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* ===============================
+     INFO CARD (BROWN)
+  =============================== */
+  .movie-info {
+    width: 50%;
+    background: linear-gradient(
+      135deg,
+      #3c2a21,
+      #1a120b
+    );
+    padding: 38px;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  }
+  
+  /* ===============================
+     TEXT
+  =============================== */
+  .movie-info h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+    color: #d5cea3;
+    letter-spacing: 0.5px;
+  }
+  
+  .movie-info p {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: #e5e5cb;
+  }
+  
+  .movie-description {
+    margin-top: 20px;
+    line-height: 1.75;
+    color: #e5e5cb;
+  }
+  
+  /* ===============================
+     RATING
+  =============================== */
+  .rating {
+    margin-top: 20px;
+  }
+  
+  .star {
+    font-size: 30px;
+    cursor: pointer;
+    color: #b5b5b5;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .star:hover {
+    transform: scale(1.2);
+  }
+  
+  .star.active {
+    color: #f4c430;
+  }
+  
+  /* ===============================
+     ACTION BUTTONS
+  =============================== */
+  .details-actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .details-actions .btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  /* EDIT */
+  .btn.edit {
+    background: linear-gradient(
+      to right,
+      #d5cea3,
+      #e5e5cb
+    );
+    color: #1a120b;
+  }
+  
+  .btn.edit:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* DELETE */
+  .btn.delete {
+    background: linear-gradient(
+      to right,
+      #b54a4a,
+      #e57373
+    );
+    color: #fff;
+  }
+  
+  .btn.delete:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* BACK */
+  .btn.back {
+    background: #f6f5f0;
+    color: #1a120b;
+  }
+  
+  .btn.back:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* ===============================
+     RESPONSIVE
+  =============================== */
+  @media (max-width: 900px) {
+    .movie-details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .movie-poster {
+      width: 260px;
+      height: 380px;
+    }
+  
+    .movie-info {
+      width: 100%;
+      padding: 28px;
+    }
+  
+    .movie-info h2 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .details-actions {
+      justify-content: center;
+    }
+  }
+  
