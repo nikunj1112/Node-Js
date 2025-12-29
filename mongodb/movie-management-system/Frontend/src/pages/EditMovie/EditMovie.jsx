@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
@@ -7,7 +5,6 @@ import {
   updateMovieApi
 } from "../../../api/movieApi.js";
 import "./EditMovie.css";
-
 
 const EditMovie = () => {
   const { id } = useParams();
@@ -20,7 +17,8 @@ const EditMovie = () => {
     description: ""
   });
 
-  const [poster, setPoster] = useState(null);
+  const [poster, setPoster] = useState(null);   // ✅ poster state
+  const [fileName, setFileName] = useState(""); // ✅ file name
   const [loading, setLoading] = useState(true);
 
   /* ===============================
@@ -51,6 +49,17 @@ const EditMovie = () => {
   };
 
   /* ===============================
+     FILE CHANGE
+  =============================== */
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setPoster(file);
+      setFileName(file.name); // ✅ show name
+    }
+  };
+
+  /* ===============================
      UPDATE MOVIE
   =============================== */
   const submitHandler = async (e) => {
@@ -77,7 +86,7 @@ const EditMovie = () => {
 
   return (
     <div className="form-container">
-      <h2>Edit Movie</h2>
+      <h2>✏ Edit Movie</h2>
 
       <form onSubmit={submitHandler}>
         <input
@@ -111,11 +120,23 @@ const EditMovie = () => {
           required
         />
 
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setPoster(e.target.files[0])}
-        />
+        {/* FILE UPLOAD */}
+        <label className="browse-btn1">
+          Browse File
+          <input
+            type="file"
+            accept="image/*"
+            hidden
+            onChange={handleFileChange}
+          />
+        </label>
+
+        {/* FILE NAME SHOW */}
+        {fileName && (
+          <p className="file-name">
+          <strong className="file-names">Selected: </strong> <span>{fileName}</span>
+          </p>
+        )}
 
         <button type="submit">
           Update Movie

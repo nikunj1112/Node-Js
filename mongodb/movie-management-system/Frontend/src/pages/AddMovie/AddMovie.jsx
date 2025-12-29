@@ -57,7 +57,7 @@ const AddMovie = () => {
 
   return (
     <div className="form-container">
-      <h2>Add Movie</h2>
+      <h2>➕Add Movie</h2>
 
       <form onSubmit={submitHandler}>
         <input name="title" placeholder="Movie Title" onChange={handleChange} required />

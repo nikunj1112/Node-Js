@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* LOGO */}
       <div className="nav-logo">
-        🎬 MovieMS
+        🎬 FilmHub
       </div>
 
       {/* LINKS */}

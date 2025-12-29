@@ -22,7 +22,7 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
   }
   
   .nav-link {
@@ -30,7 +30,7 @@
     font-size: 16px;
     font-weight: 500;
     color: #e5e5cb;
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 20px;
     transition: all 0.3s ease;
   }

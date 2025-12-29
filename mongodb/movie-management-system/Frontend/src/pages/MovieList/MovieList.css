@@ -1,99 +1,91 @@
+/* ===============================
+   PAGE WRAPPER (NO PAGE SCROLL)
+=============================== */
 .movie-list {
-    padding: 40px;
-    background: #f7f7f7;
-    min-height: 100vh;
-  }
-  
-  .movie-list h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #1a120b;
-  }
-  
-  /* SEARCH */
-  .search-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-  }
-  
-  .search-box input {
-    padding: 10px 14px;
-    width: 260px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  
-  .search-box button {
-    padding: 10px 20px;
-    border: none;
-    background: #3c2a21;
-    color: #e5e5cb;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  /* GRID */
-  .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-  }
-  
-  /* CARD */
-  .movie-card {
-    background: white;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  .movie-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-  }
-  
-  /* HOVER EFFECT */
-  .movie-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.3);
-  }
-  
-  .movie-card h3 {
-    padding: 10px;
-    color: #1a120b;
-  }
-  
-  .movie-card p {
-    padding: 0 10px;
-    font-size: 14px;
-  }
-  
-  /* ACTIONS */
-  .movie-actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 12px;
-  }
-  
-  .movie-actions a,
-  .movie-actions button {
-    text-decoration: none;
-    border: none;
-    background: #d5cea3;
-    color: #1a120b;
-    padding: 6px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 13px;
-  }
-  
-  .movie-actions button {
-    background: #e57373;
-    color: white;
-  }
-  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 🔥 page scroll off */
+  background: linear-gradient(135deg, #f6f5f0, #e5e5cb);
+}
+
+/* ===============================
+   HEADER (STATIC)
+=============================== */
+.movie-header {
+  padding: 25px 40px 15px;
+  background: linear-gradient(135deg, #f6f5f0, #e5e5cb);
+}
+
+.movie-header h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1a120b;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: none;
+  width: 260px;
+}
+
+/* FILTER BUTTONS */
+.fav-filter {
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: none;
+  background: #3c2a21;
+  color: #e5e5cb;
+  cursor: pointer;
+}
+
+.fav-filter.active {
+  background: #d5cea3;
+  color: #1a120b;
+}
+
+.clear-btn {
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: none;
+  background: #3c2a21;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===============================
+   SCROLL AREA (ONLY MOVIES)
+=============================== */
+.movie-scroll {
+  flex: 1;                 /* 🔥 key */
+  overflow-y: auto;        /* 🔥 only here */
+  padding: 20px 40px;
+}
+
+.movie-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.movie-scroll::-webkit-scrollbar-thumb {
+  background: #3c2a21;
+  border-radius: 10px;
+}
+
+/* ===============================
+   GRID
+=============================== */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 330px);
+  justify-content: center;
+  gap: 30px;
+}
+
+

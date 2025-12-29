@@ -37,7 +37,7 @@
      INFO CARD (BROWN)
   =============================== */
   .movie-info {
-    width: 50%;
+    width: 45%;
     background: linear-gradient(
       135deg,
       #3c2a21,
@@ -78,7 +78,7 @@
   }
   
   .star {
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     color: #b5b5b5;
     transition: transform 0.2s ease, color 0.2s ease;
@@ -103,7 +103,7 @@
   }
   
   .details-actions .btn {
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 30px;
     border: none;
     text-decoration: none;

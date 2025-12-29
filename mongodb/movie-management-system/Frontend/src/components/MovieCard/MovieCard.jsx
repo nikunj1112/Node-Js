@@ -1,20 +1,17 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./MovieCard.css";
 
-const MovieCard = ({ movie, onDelete }) => {
-  const [fav, setFav] = useState(false);
-
+const MovieCard = ({ movie, onDelete, isFav, onFavToggle }) => {
   return (
     <div className="movie-card">
       {/* ❤️ FAVORITE ICON */}
       <span
-        className={`fav-icon ${fav ? "active" : ""}`}
+        className={`fav-icon ${isFav ? "active" : ""}`}
         onClick={(e) => {
           e.stopPropagation();
-          setFav(!fav);
+          onFavToggle(movie._id);
         }}
-        title="Add to Favorites"
+        title="Favorite"
       >
         ♥
       </span>

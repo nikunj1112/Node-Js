@@ -73,7 +73,7 @@
   =============================== */
   .form-container button {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 12px;
     border: none;
     border-radius: 30px;
@@ -110,4 +110,39 @@
       font-size: 26px;
     }
   }
+  /* .browse-btn1{
+    background: #e5e5cb;
+    color: #3c2a21;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+
+  } */
+
+  .browse-btn1 {
+    display: inline-block;
+    padding: 10px 26px;
+    background: linear-gradient(to right, #d5cea3, #e5e5cb);
+    color: #1a120b;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 8px;
+  }
   
+  .browse-btn1:hover {
+    transform: translateY(-2px);
+  }
+  
+  .file-name {
+    font-size: 13px;
+    color: #d5cea3;
+    margin-bottom: 10px;
+  }
+  
+  .file-names{
+    color:#d5cea3;
+    font-size: 15px;
+  }
